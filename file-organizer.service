@@ -1,0 +1,12 @@
+[Unit]
+Description=Organizador Automatico de Arquivos (Downloads -> Documents / Pictures)
+After=default.target
+
+[Service]
+Type=simple
+ExecStart=%h/Documents/agy_projects/file_organizer/target/x86_64-unknown-linux-musl/release/file_organizer --watch --interval 3
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=default.target
